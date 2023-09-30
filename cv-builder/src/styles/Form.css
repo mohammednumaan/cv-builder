@@ -1,0 +1,33 @@
+
+.firstName,
+.lastName,
+.mail {
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 50px;
+    padding-left: 100px;
+
+    font-family: sans-serif;
+
+}
+
+.firstNameLabel,
+.lastNameLabel,
+.emailLabel {
+    font-weight: 800;
+}
+
+#fName,
+#lName,
+#email {
+
+    width: 400px;
+    height: 20px;
+
+    color: #201E20;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
