@@ -1,5 +1,6 @@
 .personal-info-header,
-.education-info-header{
+.education-info-header,
+.experience-info-header{
 
     font-family: sans-serif;
     padding: 54px;
@@ -8,7 +9,8 @@
 }
 
 .CV-Education,
-.CV-Personal{
+.CV-Personal,
+.CV-Experience{
     width: 460px;
     display: flex;
     flex-direction: column;
@@ -27,7 +29,8 @@
 }
 
 .CV-Education > * ,
-.CV-Personal > *{
+.CV-Personal > *
+.CV--Experience > *{
     margin-top: -10px;
     margin-left: -100px;
 

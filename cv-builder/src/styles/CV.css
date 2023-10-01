@@ -1,15 +1,16 @@
 /* CV STYLING */
 
-.cv{
-    position: relative;
+
+.cv-container{
+    position: sticky;
     height: 1000px;
     width: 900px;
     background-color: #FBEAEB;
-    margin-top: -500px;
-    margin-left: 600px;
     border: 1px solid black;
     border-radius: 10px;
     font-family: sans-serif;
+    margin-top: -700px;
+    left: 800px;
 }
 
 .cv-info{

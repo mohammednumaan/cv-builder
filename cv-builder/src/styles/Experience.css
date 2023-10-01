@@ -1,0 +1,23 @@
+.companyName {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 20px;
+    width: 400px ;
+    padding-left: 100px;
+
+    font-family: sans-serif;
+}
+
+.companyLabel {
+    font-weight: 800;
+}
+
+#company {
+    width: 400px;
+    height: 20px;
+
+    color: #201E20;
+    border: 1px solid black;
+    border-radius: 5px;
+}
