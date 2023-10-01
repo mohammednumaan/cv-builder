@@ -1,0 +1,108 @@
+.personal-info-header,
+.education-info-header{
+
+    font-family: sans-serif;
+    padding: 54px;
+    color: #2F3C7E;
+    margin: 0;
+}
+
+.CV-Education,
+.CV-Personal{
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 50px;
+    padding: 20px;
+    border: 1px solid #201E20;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: #FBEAEB;
+    color: #2F3C7E;
+
+    
+}
+
+.CV-Education > * ,
+.CV-Personal > *{
+    margin-top: -10px;
+    margin-left: -100px;
+
+}
+
+.school-header{
+
+    text-align: center;
+    background-color: #2F3C7E;
+    width: 500px;
+    height: 40px;
+    font-family: sans-serif;
+    padding-top: 10px;
+    margin: 0%;
+    margin-top: -20px;
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: #FBEAEB;
+}
+
+.buttons{
+    display: flex;
+    gap: 100px;
+}
+
+#add-education-btn{
+
+    font-family: sans-serif;
+    font-weight: 800;
+    color: #2F3C7E;
+    background-color: #FBEAEB;
+    border: 1px solid #2F3C7E;
+    border-radius: 10px;
+    width: 140px;
+    margin-top: 30px;
+    margin-left: 230px;
+    padding: 16px;
+    transition: 1s;
+    opacity: 90%;
+}
+
+#remove-education-btn,
+#hide-education-btn{
+
+    font-family: sans-serif;
+    font-weight: 800;
+    color: #FBEAEB;
+    background-color: #2F3C7E;
+    border: 1px solid wheat;
+    border-radius: 16px;
+    width: 140px;
+    margin-top: 30px;
+    margin-left: 230px;
+    margin-bottom: 0;
+    padding: 10px;
+    transition: 0.5s;
+    opacity: 90%;
+}
+
+#hide-education-btn{
+    margin-left: 0px;
+}
+
+
+
+#remove-education-btn:hover,
+#add-education-btn:hover,
+#hide-education-btn:hover {
+
+    opacity: 100%;
+    transform: scale(1.2);
+    
+
+}
+
+
+

@@ -1,0 +1,35 @@
+.schoolName,
+.degreeName,
+.startYear,
+.endYear {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 20px;
+    width: 400px ;
+    padding-left: 100px;
+
+    font-family: sans-serif;
+}
+
+.schoolLabel,
+.degreeLabel,
+.startLabel,
+.endLabel{
+
+    font-weight: 800;
+
+}
+
+#school,
+#degree,
+#sYear,
+#eYear {
+    width: 400px;
+    height: 20px;
+
+    color: #201E20;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}

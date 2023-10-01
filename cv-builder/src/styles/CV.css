@@ -1,0 +1,90 @@
+/* CV STYLING */
+
+.cv{
+    position: relative;
+    height: 1000px;
+    width: 900px;
+    background-color: #FBEAEB;
+    margin-top: -500px;
+    margin-left: 600px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+
+.cv-info{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.cv-name,
+.cv-email-tel{
+    width: 900px;
+    height: 70px;
+    font-size: 20px;
+    color: #FBEAEB;
+    background-color: #2F3C7E;
+}
+
+.cv-name{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cv-email-tel{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* EDUCATION INFO STYLING */
+
+.cv-education-header,
+.cv-experience-header{
+    
+    text-align: center;
+    color: #2F3C7E;
+}
+
+.school-name,
+.degree-name {
+    margin-left: -340px;
+    color: #2F3C7E;
+}
+
+
+
+.education-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+.start-year,
+.end-year{
+    color: #2F3C7E;
+}
+.year-info{
+    margin-right: -200px;
+}
+
+.line{
+
+    position: absolute;
+    border: 1px solid #2F3C7E;
+   
+    border-radius: 10px;
+    width: 800px;
+    margin-left: -400px;
+}
+
+
+
