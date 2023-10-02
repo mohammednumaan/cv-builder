@@ -17,8 +17,6 @@ export default function App(){
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
-  const [active, setActive] = useState(true)
-  const [currentId, setCurrentId] = useState(educations[0].id)
 
 
   // HANDLE NAME
@@ -94,29 +92,6 @@ export default function App(){
     
   }
 
-  // SHOW/HIDE EDUCATION
-
-  const hideEducation = (id) => {
-    let datas = [...educations]
-    datas.map(data => {
-      if (data.id === id) {
-        setActive(!active)
-        setCurrentId(id)
-      }
-    })
-  }
-
-  // BUTTON TEXT
-
-  let handleButtonText = (e) => {
-    let datas = [...educations]
-    datas.map(data => {
-      e.target.textContent = (e.target.id === data.id) ? 'Show' : 'Hide'
-    })
-  }
-
-
-
 
   // HANDLE EXPERIENCE
 
@@ -171,73 +146,73 @@ export default function App(){
       <div className='CV-Form'>
         <h2 className='preview-header'>Preview</h2>
         <CV name={name} email={email} phone={phone} educations={educations} experiences={experiences} />
-        <h2 className='personal-info-header'>Personal Information</h2>
 
-        <div className='CV-Personal'>
-          <Input text={'Full Name'} label={'fullNameLabel'} type={'text'} nameOfClass={'fullName'} nameOfId={'fName'} value={name} handleChange={handleNameChange} />
-          <Input text={'Email'} label={'emailLabel'} type={'email'} nameOfClass={'mail'} nameOfId={'email'} value={email} handleChange={handleEmailChange} />
-          <Input text={'Phone'} label={'phoneLabel'} type={'tel'} nameOfClass={'tel-phone'} nameOfId={'phone'} value={phone} handleChange={handlePhoneChange} />
+        <h2 className='form-header'>Fill Your Data Here</h2>
+        <div className='CV-Form-Container'>
+          <h2 className='personal-info-header'>Personal Information</h2>
+          
+          <div className='CV-Personal'>
+            <Input text={'Full Name'} label={'fullNameLabel'} type={'text'} nameOfClass={'fullName'} nameOfId={'fName'} value={name} handleChange={handleNameChange} />
+            <Input text={'Email'} label={'emailLabel'} type={'email'} nameOfClass={'mail'} nameOfId={'email'} value={email} handleChange={handleEmailChange} />
+            <Input text={'Phone'} label={'phoneLabel'} type={'tel'} nameOfClass={'tel-phone'} nameOfId={'phone'} value={phone} handleChange={handlePhoneChange} />
 
-        </div>
+          </div>
 
-        <h2 className='education-info-header'>Education</h2>
-        {educations.map((edu) => {
-          return (
-            <Fragment key={edu.id}>
-              <div className='CV-Education'>
 
-                <h2 className='school-header'>{edu.school}</h2>
-                {(currentId === edu.id) && (
-                  <div className='education-details'>
-                    <Education text={'School'} label={'schoolLabel'} type={'text'} nameOfClass={'schoolName'} nameOfId={'school'} value={edu.school} handleChange={(event) => handleEducationChange(event, edu.id, 'school')}   />
+          <h2 className='education-info-header'>Education</h2>
+          {educations.map((edu) => {
+            return (
+              <Fragment key={edu.id}>
+                <div className='CV-Education'>
 
-                    <Education text={'Degree'} label={'degreeLabel'} type={'text'} nameOfClass={'degreeName'} nameOfId={'degree'} value={edu.degree} handleChange={(event) => handleEducationChange(event, edu.id, 'degree')}   />
+                  <h2 className='school-header'>{edu.school}</h2>
+                    <div className='education-details'>
+                      <Education text={'School'} label={'schoolLabel'} type={'text'} nameOfClass={'schoolName'} nameOfId={'school'} value={edu.school} handleChange={(event) => handleEducationChange(event, edu.id, 'school')}   />
 
-                    <Education text={'Starting Year'} label={'startLabel'} type={'date'} nameOfClass={'startYear'} nameOfId={'sYear'} value={edu.starting} handleChange={(event) => handleEducationChange(event, edu.id, 'starting')}   />
+                      <Education text={'Degree'} label={'degreeLabel'} type={'text'} nameOfClass={'degreeName'} nameOfId={'degree'} value={edu.degree} handleChange={(event) => handleEducationChange(event, edu.id, 'degree')}   />
 
-                    <Education text={'Ending Year'} label={'endLabel'} type={'date'} nameOfClass={'endYear'} nameOfId={'eYear'} value={edu.ending} handleChange={(event) => handleEducationChange(event, edu.id, 'ending')}   />
-                    
-                    <button id='remove-education-btn' onClick={() => removeEducation(edu.id)}>Remove</button>
-                  </div>
-                )}
-                <button id={edu.id} className='hide-education-btn' onClick={(event) => {
-                  hideEducation(edu.id)
-                  handleButtonText(event)
-                }}>Hide</button>
+                      <Education text={'Starting Year'} label={'startLabel'} type={'date'} nameOfClass={'startYear'} nameOfId={'sYear'} value={edu.starting} handleChange={(event) => handleEducationChange(event, edu.id, 'starting')}   />
 
-              </div>
-            </Fragment>
-          )
-        })}
-        <button id='add-education-btn' onClick={(event) => addNewEducation(event)}>Add New Education</button>
-        
-        <h2 className='experience-info-header'>Experience</h2>
-        {experiences.map((exp) => {
-          return (
-            <Fragment key={exp.id}>
-
-              <div className='CV-Experience'>
-
-                <h2 className='company-header'>{exp.company}</h2>
-                <div className='experience-details'>
-
-                  <Experience text={'Company Name'} label={'companyLabel'} type={'text'} nameOfClass={'companyName'} nameOfId={'company'} value={exp.company} handleChange={(event) => handleExperienceChange(event, exp.id, 'company')} />
-
-                  <Experience text={'Job Title'} label={'jobLabel'} type={'text'} nameOfClass={'jobName'} nameOfId={'job'} value={exp.job} handleChange={(event) => handleExperienceChange(event, exp.id, 'job')} />
-
-                  <Experience text={'Duration'} label={'durationLabel'} type={'text'} nameOfClass={'durationName'} nameOfId={'duration'} value={exp.duration} handleChange={(event) => handleExperienceChange(event, exp.id, 'duration')} />
-
-                  <Description text={'Experience Description'} label={'descLabel'} nameOfClass={'descName'} nameOfId={'desc'} value={exp.description} handleChange={(event) => handleExperienceChange(event, exp.id, 'desc')} />
-
-                  <button id='remove-experience-btn' onClick={() => removeExperience(exp.id)}>Remove</button>
+                      <Education text={'Ending Year'} label={'endLabel'} type={'date'} nameOfClass={'endYear'} nameOfId={'eYear'} value={edu.ending} handleChange={(event) => handleEducationChange(event, edu.id, 'ending')}   />
+                      
+                      <button id='remove-education-btn' onClick={() => removeEducation(edu.id)}>Remove</button>
+                    </div>
 
                 </div>
-              </div>
+              </Fragment>
+            )
+          })}
+          <button id='add-education-btn' onClick={(event) => addNewEducation(event)}>Add New Education</button>
+          
+          <h2 className='experience-info-header'>Experience</h2>
+          {experiences.map((exp) => {
+            return (
+              <Fragment key={exp.id}>
 
-            </Fragment>
-          )
-        })}
-        <button id='add-experience-btn' onClick={(event) => addNewExperience(event)}>Add New Experience</button>
+                <div className='CV-Experience'>
+
+                  <h2 className='company-header'>{exp.company}</h2>
+                  <div className='experience-details'>
+
+                    <Experience text={'Company Name'} label={'companyLabel'} type={'text'} nameOfClass={'companyName'} nameOfId={'company'} value={exp.company} handleChange={(event) => handleExperienceChange(event, exp.id, 'company')} />
+
+                    <Experience text={'Job Title'} label={'jobLabel'} type={'text'} nameOfClass={'jobName'} nameOfId={'job'} value={exp.job} handleChange={(event) => handleExperienceChange(event, exp.id, 'job')} />
+
+                    <Experience text={'Duration'} label={'durationLabel'} type={'text'} nameOfClass={'durationName'} nameOfId={'duration'} value={exp.duration} handleChange={(event) => handleExperienceChange(event, exp.id, 'duration')} />
+
+                    <Description text={'Experience Description'} label={'descLabel'} nameOfClass={'descName'} nameOfId={'desc'} value={exp.description} handleChange={(event) => handleExperienceChange(event, exp.id, 'desc')} />
+
+                    <button id='remove-experience-btn' onClick={() => removeExperience(exp.id)}>Remove</button>
+
+                  </div>
+                </div>
+
+              </Fragment>
+            )
+          })}
+          <button id='add-experience-btn' onClick={(event) => addNewExperience(event)}>Add New Experience</button>
+        </div>
+        
       </div>
     </>
   )

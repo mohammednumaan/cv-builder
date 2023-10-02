@@ -1,17 +1,32 @@
 .CV-Form{
     padding: 10px;
-    overflow: scroll;
+    width: 540px;
 }
 .personal-info-header,
 .education-info-header,
-.experience-info-header {
+.experience-info-header,
+.form-header {
 
     font-family: sans-serif;
-    padding: 54px;
+    padding: 14px;
     color: #2F3C7E;
     margin: 0;
+    margin-left: 0px;
+    margin-top: 25px;
     width: fit-content;
     
+}
+
+.personal-info-header {
+    margin-top: 0;
+}
+
+.form-header {
+
+    position: absolute;
+    margin: 0;
+    top: 130px;
+    left: 160px;
 }
 
 .preview-header {
@@ -21,7 +36,7 @@
     color: #2F3C7E;
     margin: 0;
     margin-left: 980px;
-    margin-top: 60px;
+    margin-top: 40px;
     width: fit-content;
 }
 
@@ -34,7 +49,7 @@
     justify-content: center;
     align-items: center;
 
-    margin-left: 50px;
+    margin-left: 5px;
     padding: 20px;
     border: 1px solid #201E20;
     border-radius: 15px;
@@ -86,14 +101,13 @@
     border-radius: 10px;
     width: 140px;
     margin-top: 30px;
-    margin-left: 230px;
+    margin-left: 186px;
     padding: 16px;
     transition: 1s;
     opacity: 90%;
 }
 
 #remove-education-btn,
-.hide-education-btn,
 #remove-experience-btn {
 
     font-family: sans-serif;
@@ -111,9 +125,6 @@
     opacity: 90%;
 }
 
-.hide-education-btn{
-    margin-left: 0px;
-}
 
 #remove-experience-btn{
     margin-left: 130px;
@@ -123,12 +134,23 @@
 
 #remove-education-btn:hover,
 #add-education-btn:hover,
-.hide-education-btn:hover {
+#add-experience-btn:hover,
+#remove-experience-btn:hover {
 
     opacity: 100%;
     transform: scale(1.2);
     
 
+}
+
+.CV-Form-Container {
+
+    margin-top: 90px;
+    border: 1px solid #2F3C7E;
+    border-radius: 10px;
+    padding: 10px;
+    height: 1480px;
+    overflow-y: scroll;
 }
 
 
