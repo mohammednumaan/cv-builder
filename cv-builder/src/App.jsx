@@ -87,6 +87,7 @@ export default function App(){
         let index = datas.indexOf(data)
         datas.splice(index, 1)
       }
+      else alert('Deafult : You Cannot Remove This Field!')
     })
     setEducation(datas)
     
@@ -127,10 +128,11 @@ export default function App(){
   const removeExperience = (id) => {
     let datas = [...experiences]
     datas.map(data => {
-      if (data.id === id){
+      if (data.id !== datas[0].id && data.id === id){
         let index = datas.indexOf(data)
         datas.splice(index,1)
       }
+      else alert('Deafult : You Cannot Remove This Field!')
     })
     setExperience(datas)
 
