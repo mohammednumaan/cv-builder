@@ -1,23 +1,35 @@
-.companyName {
+.companyName,
+.jobName,
+.descName,
+.durationName {
     display: flex;
     flex-direction: column;
 
     padding-top: 20px;
     width: 400px ;
-    padding-left: 100px;
 
     font-family: sans-serif;
 }
 
-.companyLabel {
+.companyLabel,
+.jobLabel,
+.descLabel,
+.durationLabel {
     font-weight: 800;
 }
 
-#company {
+#company, 
+#job,
+#desc,
+#duration {
     width: 400px;
     height: 20px;
 
     color: #201E20;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+#desc {
+    height: 100px;
 }

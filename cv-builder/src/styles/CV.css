@@ -1,16 +1,22 @@
 /* CV STYLING */
-
-
+.cv {
+    position: relative;
+}
 .cv-container{
-    position: sticky;
-    height: 1000px;
-    width: 900px;
+
+    position: absolute;
+
+    top: 130px;
+    left: 570px;  
+    max-width: fit-content;
+    height: 1500px;
     background-color: #FBEAEB;
     border: 1px solid black;
     border-radius: 10px;
     font-family: sans-serif;
-    margin-top: -700px;
-    left: 800px;
+    overflow: scroll;
+
+   
 }
 
 .cv-info{
@@ -54,13 +60,46 @@
     color: #2F3C7E;
 }
 
+.company-info{
+    width: 600px;
+    margin-left: -20px;
+    display: flex;
+    flex-direction: column;
+    color: #2F3C7E;
+}
+
 .school-name,
 .degree-name {
     margin-left: -340px;
     color: #2F3C7E;
 }
 
+.description{
+    margin-left: -20px;
+    color: #2F3C7E;
+}
 
+
+.description > h2 {
+    margin-top: 50px;    
+    color: #2F3C7E;
+}
+
+.content {
+    /* position: absolute; */
+    width: 600px;
+    height: 200px;
+    margin: 0;  
+    word-wrap: break-word ;
+    border: 1px dotted #2F3C7E  ;
+    margin-left: -20px;
+    padding: 20px;
+}
+
+
+.experience-info{
+    margin-left: 40px;
+}
 
 .education-info{
     display: flex;
@@ -77,8 +116,7 @@
     margin-right: -200px;
 }
 
-.line{
-
+.line-education {
     position: absolute;
     border: 1px solid #2F3C7E;
    
@@ -87,5 +125,38 @@
     margin-left: -400px;
 }
 
+/* .line-experience {
+    position: absolute;
+    border: 1px dotted #2F3C7E;
+   
+    border-radius: 10px;
+    width: 800px;
+    margin-left: -100px;
+} */
+
+.cv-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2230px;
+    background-color: #2F3C7E;
+    color: #FBEAEB;
+    height: 100px;
+    width: 900px;
+}
+
+::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
 
 

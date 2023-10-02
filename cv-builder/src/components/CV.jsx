@@ -33,7 +33,7 @@ export default function CV({name, email, phone, educations, experiences}){
                                             <h5 className='end-year'>End Year : {edu.ending}</h5>
                                         </div>
                                     </div>
-                                    <hr className='line' />
+                                    <hr className='line-education' />
                                 </Fragment>
                             )
                         })}
@@ -49,18 +49,25 @@ export default function CV({name, email, phone, educations, experiences}){
                                         <div className='company-info'>
                                             <h3 className='company-name'>Company : {exp.company}</h3>
                                             <h3 className='job-title'>Job Title : {exp.job}</h3>
+                                            <h3 className='duration'>Duration : {exp.duration}</h3>
+                                        </div>
+
+                                        <div className='description'>
+                                            <h2>Experience Description</h2>
+                                        </div>
+
+                                        <div className='content'>
+                                            <p>{exp.description}</p>
                                         </div>
 
                                     </div>
-
-                        
-
                                 </Fragment>
                             )
                         })}
                     </div>
-
+                    <div className='cv-footer'>A Mohammed Numaan Build.</div>
                 </div>
+                
             </div>
         </div>
     )

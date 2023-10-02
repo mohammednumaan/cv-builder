@@ -1,11 +1,28 @@
+.CV-Form{
+    padding: 10px;
+    overflow: scroll;
+}
 .personal-info-header,
 .education-info-header,
-.experience-info-header{
+.experience-info-header {
 
     font-family: sans-serif;
     padding: 54px;
     color: #2F3C7E;
     margin: 0;
+    width: fit-content;
+    
+}
+
+.preview-header {
+    position: absolute;
+    
+    font-family: sans-serif;
+    color: #2F3C7E;
+    margin: 0;
+    margin-left: 980px;
+    margin-top: 60px;
+    width: fit-content;
 }
 
 .CV-Education,
@@ -36,7 +53,8 @@
 
 }
 
-.school-header{
+.school-header,
+.company-header{
 
     text-align: center;
     background-color: #2F3C7E;
@@ -57,7 +75,8 @@
     gap: 100px;
 }
 
-#add-education-btn{
+#add-education-btn,
+#add-experience-btn {
 
     font-family: sans-serif;
     font-weight: 800;
@@ -74,7 +93,8 @@
 }
 
 #remove-education-btn,
-#hide-education-btn{
+.hide-education-btn,
+#remove-experience-btn {
 
     font-family: sans-serif;
     font-weight: 800;
@@ -91,15 +111,19 @@
     opacity: 90%;
 }
 
-#hide-education-btn{
+.hide-education-btn{
     margin-left: 0px;
+}
+
+#remove-experience-btn{
+    margin-left: 130px;
 }
 
 
 
 #remove-education-btn:hover,
 #add-education-btn:hover,
-#hide-education-btn:hover {
+.hide-education-btn:hover {
 
     opacity: 100%;
     transform: scale(1.2);
